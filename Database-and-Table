@@ -1,0 +1,44 @@
+--Zeromarketing_Database, AND TABLES
+
+USE MASTER
+Create Database AMAZON_DB
+
+CREATE TABLE Customer_Table
+(
+Customer_Id         INT        PRIMARY KEY,
+Customer_Name   VARCHAR(50)      NOT NULL,
+Customer_City   VARCHAR(50)      NOT NULL,
+States          VARCHAR(50)      NOT NULL ,
+Country         VARCHAR(50)      NOT NULL,
+Email_Addres    VARCHAR(255)     NOT NULL,
+Customer_Addres VARCHAR(255)     NOT NULL
+)
+
+
+CREATE TABLE Product_Category_Table
+(
+product_Category_Id    INT        PRIMARY KEY,
+Product_Category_Name VARCHAR(50)  NOT NULL
+)
+
+CREATE TABLE Product_Table (
+    Product_Id            INT          PRIMARY KEY,
+    Product_Name          VARCHAR(50)  NOT NULL,
+    Product_Price         MONEY         NOT NULL,
+    Product_Category_Id    INT,  -- Define the column first
+    FOREIGN KEY (Product_Category_Id) REFERENCES Product_Category_Table(Product_Category_Id)
+);
+
+CREATE TABLE Sales_Transaction_Table (
+    Product_Id        INT      NOT NULL,
+    Customer_Id       INT      NOT NULL,
+    Order_Date       DATETIME  NULL,
+    Quantity_Sold     INT      NOT NULL,
+    Sales_Amount     MONEY     NOT NULL,
+    Delivery_Date    DATETIME  NULL,
+    
+    FOREIGN KEY (Product_Id) REFERENCES Product_Table(Product_Id),
+    FOREIGN KEY (Customer_Id) REFERENCES Customer_Table(Customer_Id)
+);
+
+
