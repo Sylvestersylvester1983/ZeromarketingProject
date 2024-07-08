@@ -1,0 +1,45 @@
+-----AMAZON STAGGING DATA LOADING 
+USE MASTER
+CREATE DATABASE AMAZONSTAGE_DB
+
+CREATE TABLE Stage_Customer_Table
+(
+Customer_Id        INT         NOT NULL,
+Customer_Name     VARCHAR(50)  NOT NULL,
+Customer_City     VARCHAR(50)  NOT NULL,
+Customer_State    VARCHAR(50) NOT NULL,
+Customer_Country  VARCHAR(50) NOT NULL,
+Email_Addres      VARCHAR(255) NOT NULL,
+Customer_Addres   VARCHAR(255) NOT NULL
+)
+
+CREATE TABLE Product_Category_Table
+(
+product_Category_Id    INT         NOT NULL,
+Product_Category_Name VARCHAR(50)  NOT NULL
+)
+
+CREATE TABLE Product_Table (
+    Product_Id            INT          NOT NULL,
+    Product_Name          VARCHAR(50)  NOT NULL,
+    Product_Price         MONEY         NOT NULL,
+    Product_Category_Id    INT,  -- Define the column first
+);
+
+CREATE TABLE Sales_Transaction_Table (
+    Product_Id        INT      NOT NULL,
+    Customer_Id       INT      NOT NULL,
+    Order_Date       DATETIME  NULL,
+    Quantity_Sold     INT      NOT NULL,
+    Sales_Amount     MONEY     NOT NULL,
+    Delivery_Date    DATETIME  NULL,
+    
+);
+
+Create Table Location_Stage
+(
+Location_Id           int       NOT NULL,
+Customer_Country  VARCHAR(50) NOT NULL,
+Customer_State    VARCHAR(50) NOT NULL,
+Customer_City     VARCHAR(50)  NOT NULL
+)
