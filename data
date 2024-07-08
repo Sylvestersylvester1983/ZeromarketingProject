@@ -1,0 +1,96 @@
+---INSERTING DATA INTO TABLE.
+INSERT INTO Product_Category_Table (Product_Category_Id, Product_Category_Name)
+VALUES (11, 'Stationary'),
+       (12, 'Laptop'),
+	   (13, 'phone' ),
+	   (14, 'Clothes');
+
+
+----Extracting Data from the Table.
+
+SELECT * FROM Product_Category_Table
+
+
+---INSERTING DATA INTO TABLE.
+INSERT INTO Product_Table
+VALUES (1, 'Pencils','50','11'),
+       (2, 'Dell','250000','12'),
+	   (3, 'HP','200000','12'),
+	   (4, 'Pens','100','11'),
+	   (5, 'Notebooks','120','11'),
+	   (6, 'iPhone','200000','13'),
+	   (7, 'Sumsung','140000','13'),
+	   (8, 'Vivo','70000','13'),
+	   (9, 'Huawei','120000','13'),
+	   (10, 'Google (Pixel)','100000','13'),
+	   (11, 'Nokia','150000','13'),
+	   (12, 'Jeans','2000','14'),
+       (13, 'T-Shirt','1500','14'),
+	   (14, 'Polo Shirt','1000','14'),
+	   (15, 'Erasers','50','11'),
+	   (16, 'Rulers','100','11'),
+	   (17, 'Highlighters','200','11'),
+	   (18, 'Markers','140000','11'),
+	   (19, 'Staplers','70000','11'),
+	   (20, 'Suit','10000','14'),
+	   (21, 'Tie','2000','14'),
+	   (22, 'Jacket','1500','14'),
+	   (23, 'Shirt','1000','14'),
+	   (24, 'Sweater','2000','14'),
+	   (25, 'Sleeveless Shirt','3000','14'),
+	   (26, 'infinix','130','13'),
+	   (27, 'ZTE','100000','13'),
+	   (28, 'HTC','70000','13'),
+	   (29, 'LG','10000','13'),
+	   (30, 'Alcatel','2000','13'),
+	   (31, 'Lenovo','150000','12'),
+	   (32,'Huawei','200000','12'),
+	   (33, 'Samsung','300000','12'),
+	   (34, 'Apple','250000','12'),
+	   (35, 'Acer','200000','12'),
+	   (36, 'Maxi dress','3000','14'),
+	   (37, 'Hoodie','5000','14'),
+	   (38, 'Tunic','4000','14'),
+	   (39, 'Blouson top','7000','14'),
+	   (40, 'Camisole top','3000','14'),
+	   (41, 'Cold-shouldered top','8000','14'),
+	   (42, ' Peplum Top','1500','14');
+
+---Extracting DATA from the Data from 
+
+SELECT * FROM Product_Table
+
+
+---INSERTING DATA INTO TABLE.
+
+INSERT INTO Customer_Table
+VALUES
+(111, 'David Paul', 'Ikoyi', 'Lagos', 'Nigeria', 'dporis@gmail.com', '2 kilosin street, Ikoyi, Lagos'),
+(112, 'Mercy Abiodun', 'Asokoro', 'Abuja', 'Nigeria', 'mercysilis@gmail.com', '4 miliko street, Asokoro, Abuja'),
+(113, 'Michael James', 'Ikoyi', 'Lagos', 'Nigeria', 'Michj@gmail.com', '102 Haris Street, Ikoyi, Lagos'),
+(114, 'Dennis Bola', 'Asokoro', 'Abuja', 'Nigeria', 'Denisb@gmail.com', '30 funke street, Asokoro, Abuja'),
+(115, 'Doris Harris', 'Ikoyi', 'Lagos', 'Nigeria', 'Daris_ha@gmail.com', '56 Naomi street, Ikoyi, Lagos'),
+(116, 'Sharon Adekunle', 'Maitama', 'Abuja', 'Nigeria', 'sharoa@gmail.com', '60 Gonish street, Maitama, Abuja'),
+(117, 'Caleb Sylvester', 'Victoria Island', 'Lagos', 'Nigeria', 'calesyl@gmail.com', '60 Bolaji street, Victoria Island, Lagos'),
+(118, 'Olabisi Michael', 'Asokoro', 'Abuja', 'Nigeria', 'olabm@gmail.com', '90 Monica street, Asokoro, Abuja'),
+(119, 'Dare Moses', 'Akpabuyo', 'Cross River', 'Nigeria', 'mosa@gmail.com', '30 Apkoko street, Akpobuyo, Cross River'),
+(120, 'Stanley James', 'Akpabuyo', 'Cross River', 'Nigeria', 'stanleyj@gmail.com', '69 Akpan street, Akpabuyo, Cross River'),
+(121, 'Osajie Boaz', 'Ogoja', 'Cross River', 'Nigeria', 'Stanleyj@gmai.com', '70 Opuni street, Ogoja, Cross River'),
+(122, 'Francis Joseph', 'Ogoja', 'Cross River', 'Nigeria', 'francis7@gmail.com', '71 ogunigi street, Ogoja, Cross River'),
+(123, 'Jacob Paul', 'Ekpoma', 'Edo', 'Nigeria', 'japaul@gmail.com', '40 Osaro street, Ekpoma, Edo'),
+(124, 'Aaron Olu', 'Uromi', 'Edo', 'Nigeria', 'aarono@gmail.com', '50 Osemudiame street, Uromi, Edo'),
+(125, 'Eunice Alasa', 'Benin City', 'Edo', 'Nigeria', 'euna@gmail.com', '47 Osapolor street, Benin City, Edo'),
+(126, 'Darris Olakin', 'Benin City', 'Edo', 'Nigeria', 'Darrio@gmail.com', '21 Francis Street, Benin City, Edo'),
+(127, 'Solomon Paul', 'Benin City', 'Edo', 'Nigeria', 'solomp@gmail.com', '81 Osahon Street, Benin City, Edo'),
+(128, 'Obinna Uche', 'Benin City', 'Edo', 'Nigeria', 'obinnuch@gmail.com', '80 Onoseta street, Benin City, Edo'),
+(129, 'Joel Akintade', 'Warri', 'Delta', 'Nigeria', 'joela@gmail.com', '6 Doris Street, Warri, Delta'),
+(130, 'Mary Olajunji', 'Asaba', 'Delta', 'Nigeria', 'marola@gmail.com', '79 oghe street, Asaba, Delta'),
+(131, 'Isaiah Temi', 'Sapele', 'Delta', 'Nigeria', 'isaiahtemi@gmail.com', '86 Efe street, Sapele, Delta'),
+(132, 'Jenifer Chioma', 'Ozoro', 'Delta', 'Nigeria', 'jenichio@gmail.com', '53 Franca street, Ozoro, Delta'),
+(133, 'Monica Tope', 'Sapele', 'Delta', 'Nigeria', 'monict@gmail.com', '91 Rita street, Sapele, Delta'),
+(134, 'Joseph Tosin', 'Ughelli', 'Delta', 'Nigeria', 'joseptos@gmail.com', '56 Noami street, Ughelli, Delta'),
+(135, 'Bolaji Yomi', 'Agbor', 'Delta', 'Nigeria', 'bolayomi@gmail.com', '71 Boaz street, Agbor, Delta'),
+(136, 'Zoe Olu', 'Ughelli', 'Delta', 'Nigeria', 'zoeol@gmail.com', '13 William street, Ughelli, Delta'),
+(137, 'Kindness Peter', 'Ikoyi', 'Lagos', 'Nigeria', 'kindpeter@gmail.com', '19 James Street, Ikoyi, Lagos'),
+(138, 'William Davison', 'Asokoro', 'Abuja', 'Nigeria', 'wildav@gmail.com', '81 Sylvester street, Asokoro, Abuja'),
+(139, 'Olu Dami', 'Ikoyi', 'Lagos', 'Nigeria', 'oludami@gmail.com', '71 Lura street, Ikoyi, Lagos');
