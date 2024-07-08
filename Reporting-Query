@@ -1,0 +1,54 @@
+--------------------------------------------------------------------------------------------------------------------------
+ USE AMAZON_DB
+SELECT COUNT(*) AS Total_Count FROM Sales_Transaction_Table
+WHERE Customer_Id = '117'
+----------------------------------------------------------------------------------------------------------------------
+---HOW MANY TIME DID THE CUSTOMER APPEAR TO PURCHASE THE PRODUCTS
+USE AMAZON_DB
+SELECT Customer_Id, COUNT(*) AS Total_Count FROM Sales_Transaction_Table
+Group by Customer_Id
+-----------------------------------------------------------------------------------------------------------------------
+--HOW MANY TIME DID THE CUSTOMER PURCHASE THE PRODUCTS
+USE AMAZON_DB
+SELECT C.Customer_Name, COUNT(*) AS Total_Count FROM 
+Sales_Transaction_Table AS S
+JOIN Customer_Table AS C ON S.Customer_Id = C.Customer_Id
+Group by C.Customer_Name;
+-----------------------------------------------------------------------------------------------------------------------
+--HOW MANY TIME DID THE CUSTOMERS COME PURCHASE OUR PRODUCTS.
+USE AMAZON_DB
+SELECT C.Customer_Id, C.Customer_Name, COUNT(*) AS Total_Count
+FROM Sales_Transaction_Table AS S
+JOIN Customer_Table AS C ON S.Customer_Id = C.Customer_Id
+GROUP BY C.Customer_Id, C.Customer_Name;
+--------------------------------------------------------------------------------------------------------------------
+USE AMAZON_DB
+SELECT COUNT(*) as Total_Count FROM Sales_Transaction_Table
+WHERE Order_Date >= '2022-12-31'
+-----------------------------------------------------------------------------------------------------------------
+--DISPLACING TOTAL SALES_PURCHASE BY CUSTOMERS
+USE AMAZON_DB
+ SELECT C.Customer_Id, C.Customer_Name, SUM(Sales_Amount) AS Total_Sales
+ FROM Sales_Transaction_Table AS S
+ JOIN Customer_Table AS C ON S.Customer_Id = C.Customer_Id
+ GROUP BY C.Customer_Id, C.Customer_Name;
+
+ -----------------------------------------------------------------------------------------------------------------
+ USE AMAZON_DB
+SELECT C.Customer_Id, C.Customer_Name,P.Product_Id, P.Product_Name, SUM(Sales_Amount) as Total_Sale_ByCustomer,
+COUNT(Quantity_sold) AS Total_Quantity_Sold
+FROM Sales_Transaction_Table AS S
+JOIN Customer_Table AS C ON S.Customer_Id = C.Customer_Id 
+JOIN Product_Table AS P ON S.Product_Id = P.Product_Id
+GROUP BY  C.Customer_Id, C.Customer_Name,P.Product_Id, P.Product_Name;
+----------------------------------------------------------------------------------------------------------
+--NAME OF CUSTOMER AND TOTAL AMOUNT OF PRODUCT_PURCHASE
+USE AMAZON_DB
+SELECT C.Customer_Name, P.Product_Name, SUM(Sales_Amount) AS Total_Sales
+FROM Sales_Transaction_Table AS S
+JOIN Customer_Table AS C ON S.Customer_Id = C.Customer_Id
+JOIN Product_Table AS P ON S.Product_Id = P.Product_Id
+GROUP BY C.Customer_Name, P.Product_Name;
+-------------------------------------------------------------------------------------------------------------
+
+
