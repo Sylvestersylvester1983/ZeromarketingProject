@@ -17,7 +17,7 @@ CREATE TABLE Product_Category_Table
 (
 product_Category_Id    INT         NOT NULL,
 Product_Category_Name VARCHAR(50)  NOT NULL
-)
+);
 
 CREATE TABLE Product_Table (
     Product_Id            INT          NOT NULL,
@@ -42,4 +42,4 @@ Location_Id           int       NOT NULL,
 Customer_Country  VARCHAR(50) NOT NULL,
 Customer_State    VARCHAR(50) NOT NULL,
 Customer_City     VARCHAR(50)  NOT NULL
-)
+);
