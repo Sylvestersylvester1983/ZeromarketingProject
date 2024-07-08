@@ -1,0 +1,4 @@
+ AGGREGATE FUNCTION IN SQL AND EXTRACTING BUSINESS DATA REPORTS.
+-- how many count do we have?
+USE AMAZON_DB
+SELECT COUNT(*) as Total_Count FROM Sales_Transaction_Table
