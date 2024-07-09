@@ -1,0 +1,8 @@
+USE ReportServer;
+
+SELECT C.Path
+FROM dbo.Subscriptions AS S
+	INNER JOIN dbo.Catalog AS C
+		ON ( S.Report_OID = C.ItemID )
+WHERE ExtensionSettings LIKE '%target@example.com%' 
+ORDER BY C.Path;
